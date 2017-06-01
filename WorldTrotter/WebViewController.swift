@@ -17,10 +17,13 @@ class WebViewController: UIViewController, WKUIDelegate {
         super.viewDidLoad()
         
         webView.delegate = self as? UIWebViewDelegate
-        if let url = URL(string: "http://apple.com") {
-            let request = URLRequest(url: url)
-            webView.loadRequest(request)
-        }
+//        if let url = URL(string: "^https?:\\/\\/.naver.com") {
+//            let request = URLRequest(url: url)
+//            webView.loadRequest(request)
+//        }
+        
+        let myUrl = URL(string: "http://naver.com")!
+        webView.loadRequest(URLRequest(url:myUrl))
     }
     
 }

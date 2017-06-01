@@ -12,7 +12,7 @@
 		4AEC06B61EC42306003E2754 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AEC06B51EC42306003E2754 /* Assets.xcassets */; };
 		4AEC06B91EC42306003E2754 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AEC06B71EC42306003E2754 /* LaunchScreen.storyboard */; };
 		4AEC06C11EDFA8F3003E2754 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEC06C01EDFA8F3003E2754 /* ConversionViewController.swift */; };
-		4AEC06C41EDFD7A4003E2754 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEC06C31EDFD7A4003E2754 /* MapKit.framework */; };
+		4AEC06C41EDFD7A4003E2754 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEC06C31EDFD7A4003E2754 /* MapKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		4AEC06C61EDFDAC6003E2754 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEC06C51EDFDAC6003E2754 /* MapViewController.swift */; };
 		4AEC06C81EDFF115003E2754 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEC06C71EDFF115003E2754 /* WebViewController.swift */; };
 		4AEC06CA1EDFFD41003E2754 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEC06C91EDFFD41003E2754 /* WebKit.framework */; };
