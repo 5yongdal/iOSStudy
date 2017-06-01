@@ -9,9 +9,10 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
     
     var mapView: MKMapView!
+    var locationManager = CLLocationManager()
     
     override func loadView() {
         // 지도 뷰 생성
@@ -44,6 +45,32 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mapView.delegate = self
+        mapView.showsUserLocation = true
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.delegate = self as? CLLocationManagerDelegate
+        
+        //Check for Location Services
+        if (CLLocationManager.locationServicesEnabled()) {
+            locationManager = CLLocationManager()
+            locationManager.delegate = self as? CLLocationManagerDelegate
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestAlwaysAuthorization()
+            locationManager.requestWhenInUseAuthorization()
+        }
+//        locationManager.requestWhenInUseAuthorization()
+//        if CLLocationManager.locationServicesEnabled() {
+//            locationManager.startUpdatingLocation()
+//        }
+//        //Zoom to user location
+//        let noLocation = CLLocationCoordinate2D()
+//        let viewRegion = MKCoordinateRegionMakeWithDistance(noLocation, 100, 100)
+//        mapView.setRegion(viewRegion, animated: false)
+//        
+//        DispatchQueue.main.async {
+//            self.locationManager.startUpdatingLocation()
+//        }
     }
     
     func mapTypeChanged(segControl: UISegmentedControl) {
